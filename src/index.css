@@ -11,3 +11,209 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.headerContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 10vh;
+  margin: 2vh 0vh 3vh 0vh;
+}
+
+header{
+  padding: 5px 9px;
+  margin-bottom: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2vw;
+  font-weight: 800;
+  border: 3px solid rgb(167, 10, 206);
+  border-radius: 25px;
+}
+
+p{
+  margin-bottom: 3px;
+  font-size: 1.2vw;
+}
+
+.game-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.gameBoard{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 50%;
+  max-width: 1000px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.clubTile{
+  opacity: 0.95;
+}
+
+.clubTile:hover{
+  transform: scale(1.01);
+  opacity: 1;
+ 
+}
+
+.best-score, .current-score{
+  position: fixed;
+  top: 40%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1vw;
+  font-weight: 800;
+}
+
+.current-score{
+  left: 8%;
+}
+
+.best-score{
+  right: 8%;
+}
+
+.score{
+  font-size: 1.7vw;
+}
+
+@media only screen and (max-width: 980px){
+
+  header{
+    font-size: 4.5vw;
+  }
+
+  p{
+    margin-bottom: 3px;
+    font-size: 3.5vw;
+  }
+
+  .best-score, .current-score{
+    position: static;
+    width: 40%;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+  }
+
+  .current-score{
+    order: -1
+  }
+  
+  .best-score{
+    order: -1;
+  }
+
+  .score{
+    font-size: 3vw;
+  }
+
+
+  .game-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .gameBoard{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+}
