@@ -22,6 +22,8 @@ const Game = () => {
             // scores are reset and best score updated in the ScoreContext if needed
             resetScores();
             reorderTeams();
+            const overlay = document.getElementById("score-overlay")
+            overlay.style.visibility = "visible"
         }
         else{
             // if the team is a valid choice then it is added to the teamsSelected array

@@ -167,6 +167,50 @@ ul {
   font-size: 1.7vw;
 }
 
+.score-screen-container{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(107, 101, 109, 0.4);
+  z-index: 1;
+  visibility: hidden;
+}
+
+.score-screen{
+  width: 50%;
+  height: 56%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #e9e9e9;
+  border: 3px solid purple;
+  opacity: 2;
+  z-index: 2;
+}
+
+.score-screen p{
+  font-size: 2vw;
+}
+
+.score-screen button:hover{
+  font-size: 1.5vw;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.score-screen button{
+  font-size: 1.5vw;
+  color: black;
+  border: 1px solid black;
+}
+
+
+
 @media only screen and (max-width: 980px){
 
   header{
