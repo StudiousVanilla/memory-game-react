@@ -1,6 +1,6 @@
 This web app was built to demonstrate proficency using the JS framework React.
 
-This is a Single Page Applicartion.
+This is a Single Page Application.
 
 React features in this app:
 
